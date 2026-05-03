@@ -1,5 +1,4 @@
 import os
-
 def write_data_to_file(filename, data_list):
     """Writes a list of strings to a text file, one per line."""
     # 'w' opens the file in write mode. It will create it if it doesn't exist.
