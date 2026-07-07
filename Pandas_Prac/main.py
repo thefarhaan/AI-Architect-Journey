@@ -22,7 +22,7 @@ print(df)
 
 data = {"Name":["Farhaan", "Khan", "Pathaan"], 
         "Age": [18, 20, 25],
-        "Score": [85, 90, 95]}
+        "Score": [85, 90, 95]} 
 df = pd.DataFrame(data)
 print(df[['Name']])
 print(df[['Name', 'Score']])
