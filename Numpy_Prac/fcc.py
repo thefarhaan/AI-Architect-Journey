@@ -26,12 +26,57 @@ a[1,3]=30 # if i need to change we update like this in numpy
 print(a)
 a[:,2]=[2,3] #if we need to change the whole column we change like this
 print(a)
+
 #example of 3d array
-b = np.array([[[1,2],[3,4]],[[5,6],[7,8]]])
+b = np.array([[[1,2],[3,4]],[[5,6],[7,8],]])
 print(b)
 print(b.ndim)
 print(b[0,1,1])
 print(b[:,:,1])#it prints column 2
 print(b[:,1,:])#it prints row 2
-b[:,1,:]=[[9,9],[8,8]]
+b[:,0,:]=[[9,9],[8,8]]
 print(b)
+
+#intializing diffrent types of array
+print(np.zeros((2,2,2)))
+print(np.ones((2,2,2)))
+print(np.full_like(a,2))
+print(np.full(a.shape,3))
+print(np.random.rand(2,4))
+print(np.random.random_sample(a.shape)) # for random decimals values
+print(np.random.randint(100,110, size=(3,3))) # for random int
+print(np.identity(3))
+arr = np.array([[1,2,3]])
+r1= np.repeat(arr, 3, axis=0)
+print(r1)
+output = np.ones([5,5])
+print(output)
+r2 = np.zeros((3,3))
+r2[1,1] = 9
+print(r2)
+output[1:4,1:4] = r2
+print(output)
+
+
+a = np.zeros((6, 6))
+
+b = np.ones((2, 2)) * 7
+
+a[2:4, 3:5] = b
+
+print(b)
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print(arr.sum())
+
+print(arr.mean())
+
+print(arr.max())
+
+print(arr.min())
+
+print(arr.argmax())
+
+print(arr.argmin())
